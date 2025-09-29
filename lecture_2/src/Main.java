@@ -10,5 +10,38 @@ public class Main {
         System.out.println('A');
         System.out.println(true);
         System.out.println(false);
+
+        int age = 25;
+        double price = 19.99;
+        char grade = 'A';
+        String name = "Anna";
+        boolean isStudent = false;
+
+        System.out.println("--------------");
+
+        System.out.println(age);
+        System.out.println(price);
+        System.out.println(grade);
+        System.out.println(name);
+        System.out.println(isStudent);
+
+        System.out.println("--------------");
+        System.out.println(age);
+        age = 28;
+        System.out.println(age);
+
+        System.out.println("--------------");
+        //    ((Object) (name).getClass().getName()
+        System.out.println((name));
+        System.out.println((Object) (name));
+        System.out.println((Object) (name).getClass());
+        System.out.println((Object) (name).getClass().getName());
+
+        System.out.println("--------------");
+        System.out.println(((Object) age).getClass().getName());
+        System.out.println(((Object) price).getClass().getName());
+        System.out.println(((Object) grade).getClass().getName());
+        System.out.println((Object) (name).getClass().getName());
+        System.out.println(((Object) isStudent).getClass().getName());
     }
 }
