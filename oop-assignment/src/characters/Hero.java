@@ -26,7 +26,7 @@ public class Hero extends Character{
     public void increaseLevel() {
         this.level++;
         System.out.println("Level up to level: " + getLevel());
-        setHealth(20);
+        setHealth(200);
     }
 
     public void setCurrentExp(int expGain) {

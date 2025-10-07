@@ -6,17 +6,12 @@ import characters.Orc;
 import helper.RandomNumber;
 
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class GameRunning {
     private Hero heroChar;
-//    private Boss bossChar;
-//    private Orc monster1;
 
     public GameRunning(Hero heroChar) {
         this.heroChar = heroChar;
-//        this.bossChar = bossChar;
-//        this.monster1 = monster1;
     }
 
     public void startGame() {
@@ -214,7 +209,7 @@ public class GameRunning {
                     }
 
                     // Boss encounter
-                } else if(encounter >= 7 && encounter < 8){
+                } else if (encounter >= 7 && encounter < 8){
                     // Skapa en boss
                     System.out.println("You encounter an boss");
                     characters.Boss boss = new Boss("Boss", 30);
@@ -271,7 +266,7 @@ public class GameRunning {
 
 
             // Stoppa om det inte funkar
-            if (heroChar.getCurrentExp() > 200) {
+            if (heroChar.getCurrentExp() > 1000) {
                 break;
             }
         }

@@ -20,7 +20,7 @@ public class Boss extends Monster{
 
     public void bossAttack(int amount){
         if(state()) {
-            System.out.println(name + " does a special attack and makes " + amount * specialAttack + " damage");
+            System.out.println("&&&&&&&&&&&&&&& "+ name + " does a special attack and makes " + amount * specialAttack + " damage &&&&&&&&&&&&&&&");
         } else {
             System.out.println(name + " cant attack.");
         }
