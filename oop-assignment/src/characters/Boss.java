@@ -19,7 +19,7 @@ public class Boss extends Monster{
     }
 
     public void bossAttack(){
-        roll = Math.round(Math.random() * 100);
+        int roll = (int) Math.round(Math.random() * 100);
         if(roll > 0 || roll <= 30) {
             //Special attack
         } else {

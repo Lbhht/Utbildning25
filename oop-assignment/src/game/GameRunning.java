@@ -3,18 +3,17 @@ package game;
 import characters.Boss;
 import characters.Hero;
 import characters.Orc;
+import helper.RandomNumber;
 
 public class GameRunning {
     private Hero heroChar;
     private Boss bossChar;
     private Orc monster1;
-    private Orc monster2;
 
-    public GameRunning(Hero heroChar, Boss bossChar, Orc monster1, Orc monster2) {
+    public GameRunning(Hero heroChar, Boss bossChar, Orc monster1) {
         this.heroChar = heroChar;
         this.bossChar = bossChar;
         this.monster1 = monster1;
-        this.monster2 = monster2;
     }
 
     public void startGame() {
@@ -32,6 +31,7 @@ public class GameRunning {
 
             // Attack hero
             heroChar.attack(10);
+            heroChar.attack(RandomNumber.randomInt());
 
             // Damage monster
             bossChar.takeDamage(4);
@@ -52,7 +52,9 @@ public class GameRunning {
 
 
             // Öka expn
-            heroChar.gainExp(40);
+            heroChar.gainExp(60);
+
+            heroChar.status();
 
             if (heroChar.getCurrentExp() > 200) {
                 break;

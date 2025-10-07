@@ -6,7 +6,7 @@ public abstract class Character {
     private int health;
 
     public Character(String name) {
-        this.name = "placeholder";
+        this.name = name;
         this.health = 100;
     }
 
@@ -49,7 +49,7 @@ public abstract class Character {
     public void attack(int amount) {
         if(state()) {
             //target.health -= amount;
-            System.out.println(name + " attacks " + " and makes " + amount + " damage");
+            System.out.println(name + " attacks and makes " + amount + " damage");
         } else {
             System.out.println(name + " cant attack.");
         }
