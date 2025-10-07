@@ -14,3 +14,7 @@ Har svårt att förstå implementationen av en scanner och hur det ska placeras 
 Förstår grunderna vi lärt oss som variabler, logik, metoder, arrays.
 
 Förstår lite av klasser, struktur av projekt. Just nu känns det mer naturligt att placera allt i ett istället för att dela upp det och skapa en struktur.
+
+---
+## Länk till project
+https://github.com/Lbhht/Utbildning25/tree/main/oop-assignment
