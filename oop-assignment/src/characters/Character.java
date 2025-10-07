@@ -25,8 +25,8 @@ public abstract class Character {
         this.name = name;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public void setHealth(int healthIncrease) {
+        this.health = getHealth() + healthIncrease;
     }
 
     public boolean state() {
@@ -46,10 +46,10 @@ public abstract class Character {
         }
     }
 
-    public void attack(int amount, String target) {
+    public void attack(int amount) {
         if(state()) {
-            target.health -= amount;
-            System.out.println(name + " attacks " + target + " and makes " + amount + " damage");
+            //target.health -= amount;
+            System.out.println(name + " attacks " + " and makes " + amount + " damage");
         } else {
             System.out.println(name + " cant attack.");
         }
