@@ -1,8 +1,8 @@
 package characters;
 
 public class Hero extends Character{
-    int level;
-    int currentExp;
+    private int level;
+    private int currentExp;
 
     public Hero(String name) {
         super(name);
@@ -12,7 +12,7 @@ public class Hero extends Character{
 
     @Override
     public void saySomething() {
-        System.out.println(name + " says something");
+        System.out.println("~~~~ " + name + " says something");
     }
 
     public int getLevel() {
@@ -26,6 +26,7 @@ public class Hero extends Character{
     public void increaseLevel() {
         this.level++;
         System.out.println("Level up to level: " + getLevel());
+        setHealth(20);
     }
 
     public void setCurrentExp(int expGain) {
@@ -45,7 +46,6 @@ public class Hero extends Character{
         if(currentExp > 100) {
             increaseLevel();
             setCurrentExp(0);
-            setHealth(20);
         }
     }
 }

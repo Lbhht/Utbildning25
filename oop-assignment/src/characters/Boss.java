@@ -5,7 +5,7 @@ public class Boss extends Monster{
 
     public Boss(String name, int specialAttack) {
         super(name);
-        this.specialAttack = 30;
+        this.specialAttack = 2;
     }
 
     @Override
@@ -18,12 +18,11 @@ public class Boss extends Monster{
         System.out.println(name + " makes a sound");
     }
 
-    public void bossAttack(){
-        int roll = (int) Math.round(Math.random() * 100);
-        if(roll > 0 || roll <= 30) {
-            //Special attack
+    public void bossAttack(int amount){
+        if(state()) {
+            System.out.println(name + " does a special attack and makes " + amount * specialAttack + " damage");
         } else {
-            // vanlig attack
+            System.out.println(name + " cant attack.");
         }
     }
 }

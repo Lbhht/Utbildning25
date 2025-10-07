@@ -4,10 +4,12 @@ public abstract class Character {
     // Protected istället för private för att kunna använda i Hero klassen.
     protected String name;
     private int health;
+    private int maxHealth;
 
-    public Character(String name) {
+    protected Character(String name) {
         this.name = name;
         this.health = 100;
+        this.maxHealth = 100;
     }
 
     // Abstrakt metod
@@ -26,7 +28,9 @@ public abstract class Character {
     }
 
     public void setHealth(int healthIncrease) {
-        this.health = getHealth() + healthIncrease;
+        this.maxHealth += healthIncrease;
+        this.health = maxHealth;
+        System.out.println("Max health restored to new max: " + this.health + "hp");
     }
 
     public boolean state() {
@@ -41,14 +45,13 @@ public abstract class Character {
         health -= damage;
         if(state()) {
             System.out.println(name + " took " + damage + " damage, " + health + " health left.");
-        } else {
-            health = 0;
+        } else if (this.health <= 0){
+            //System.out.println("Nu är tydligen this.health <= 0");
         }
     }
 
     public void attack(int amount) {
         if(state()) {
-            //target.health -= amount;
             System.out.println(name + " attacks and makes " + amount + " damage");
         } else {
             System.out.println(name + " cant attack.");

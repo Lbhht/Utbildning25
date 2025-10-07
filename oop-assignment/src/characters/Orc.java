@@ -5,13 +5,15 @@ public class Orc extends Monster{
         super(name);
     }
 
+
+
     @Override
     public void makeSound() {
-        System.out.println("Orc makes a sound");
+        System.out.println("~~~~ Orc makes a sound");
     }
 
     @Override
     public void saySomething() {
-        System.out.println("Orc says something");
+        System.out.println("~~~~ Orc says something");
     }
 }

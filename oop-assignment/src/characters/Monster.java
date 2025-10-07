@@ -2,9 +2,10 @@ package characters;
 
 public abstract class Monster extends Character{
 
-    public Monster(String name) {
+    protected Monster(String name) {
         super(name);
     }
 
+    // Abstrakt metod
     public abstract void makeSound();
 }
