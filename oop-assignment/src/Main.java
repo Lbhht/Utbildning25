@@ -36,8 +36,11 @@ public class Main {
             // Skapa ett game
             game.GameRunning newGame = new GameRunning(hero);
             newGame.startGame();
+
+            // Vill du fortsätta
             System.out.println("Do you want to continue true/false?");
             run = scanner.nextBoolean();
+            scanner.nextLine();
         }
 
 
